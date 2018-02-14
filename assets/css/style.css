@@ -1,0 +1,55 @@
+body{
+    background-image: url("../images/archer_background.jpg"); 
+    background-repeat:  no-repeat;
+    background-size: cover;
+    /* height: 100%; */
+}
+
+.display-4{
+    color: wheat;
+}
+
+.jumbotron{
+    padding-top: 20px;
+    opacity: .7;
+    text-align: center;
+    background-color: black;
+}
+
+
+.row{
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.card-header{
+    text-align: center;
+}
+
+.card-title{
+    text-align: center;
+    color: wheat;
+}
+
+.card-body{
+    background-color: black;
+    text-align: center;
+}
+
+.card{
+    opacity: .7;
+    background-color: black;
+}
+
+h3{
+    color: wheat;
+}
+.winCounter{
+    color: wheat;
+}
+.lossCounter{
+    color: wheat;
+}
+.livesLeft{
+    color: wheat;
+}
