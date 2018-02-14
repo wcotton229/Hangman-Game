@@ -25,11 +25,10 @@ var correctGuessesCounter = 0;
 //Maybe will do this later
 
 // Functions
-//=========================================================================================
-// Choose word randomly
+//=========================================================================
 
 function reset() {
-
+        //Chooses word randomly
         choosenWord = easyNames[Math.floor(Math.random() * easyNames.length)];
 
         wordlength = choosenWord.split('');
@@ -80,13 +79,17 @@ function startGame() {
                 blanksAndSuccesses.push('_');
                 document.getElementsByClassName('card-title').innerHTML = blanksAndSuccesses;
         }
-}
+
 document.getElementsByClassName('card-title').innerHTML = blanksAndSuccesses.join(' ');
 document.getElementsByClassName('winCounter').innerHTML = winCount;
-document.getElementsByClassName('livesLeft').innerHTML = livesLeft;
+document.getElementsByClassName('numGuesses').innerHTML = livesLeft;
 document.getElementsByClassName('lossCounter').innerHTML = loseCount;
 document.getElementsByClassName('wrongGuesses').innerHTML = wrongLetters;
-
+        console.log(choosenWord);
+	console.log(wordlength);
+	console.log(underScore);
+	console.log(blanksAndSuccesses);
+}
 
 function compareLetters(userKey) {
         console.log('WORKING!');
@@ -109,7 +112,7 @@ function compareLetters(userKey) {
                 wrongLetters.push(userKey);
                 livesLeft--;
                 //Changes HTML
-                document.getElementById('livesLeft').innerHTML = livesLeft;
+                document.getElementById('numGuesses').innerHTML = livesLeft;
                 document.getElementById('wrongGuesses').innerHTML = wrongLetters;
                 //Test / Debug
                 console.log('Wrong Letters = ' + wrongLetters);
