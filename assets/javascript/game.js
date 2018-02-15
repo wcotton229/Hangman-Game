@@ -77,18 +77,21 @@ function startGame() {
 
         for (var i = 0; i < underScore; i++) {
                 blanksAndSuccesses.push('_');
-                document.getElementsByClassName('card-title').innerHTML = blanksAndSuccesses;
+                document.querySelector('.card-title').innerHTML = blanksAndSuccesses;
         }
 
-document.getElementsByClassName('card-title').innerHTML = blanksAndSuccesses.join(' ');
-document.getElementsByClassName('winCounter').innerHTML = winCount;
-document.getElementsByClassName('numGuesses').innerHTML = livesLeft;
-document.getElementsByClassName('lossCounter').innerHTML = loseCount;
-document.getElementsByClassName('wrongGuesses').innerHTML = wrongLetters;
+        document.querySelector('.card-title').innerHTML = blanksAndSuccesses.join(' ');
+        document.querySelector('.winCounter').innerHTML = winCount;
+        document.querySelector('.numGuesses').innerHTML = livesLeft;
+        document.querySelector('.lossCounter').innerHTML = loseCount;
+        document.querySelector('.wrongGuesses').innerHTML = wrongLetters;
         console.log(choosenWord);
-	console.log(wordlength);
-	console.log(underScore);
-	console.log(blanksAndSuccesses);
+        console.log(wordlength);
+        console.log(underScore);
+        console.log(blanksAndSuccesses);
+
+        var archerTheme = new Audio ('archer_theme.mp3');
+        archerTheme.play();
 }
 
 function compareLetters(userKey) {
@@ -101,7 +104,7 @@ function compareLetters(userKey) {
                         if (wordlength[i] === userKey) {
                                 correctGuessCounter++;
                                 blanksAndSuccesses[i] = userKey;
-                                document.getElementById('card-title').innerHTML = blanksAndSuccesses.join(' ');
+                                document.querySelector('.card-title').innerHTML = blanksAndSuccesses.join(' ');
                         }
                 }
                 //Test / Debug
@@ -112,8 +115,9 @@ function compareLetters(userKey) {
                 wrongLetters.push(userKey);
                 livesLeft--;
                 //Changes HTML
-                document.getElementById('numGuesses').innerHTML = livesLeft;
-                document.getElementById('wrongGuesses').innerHTML = wrongLetters;
+                console.log(livesLeft)
+                document.querySelector('.numGuesses').innerHTML = livesLeft;
+                document.querySelector('.wrongGuesses').innerHTML = wrongLetters;
                 //Test / Debug
                 console.log('Wrong Letters = ' + wrongLetters);
                 console.log('Guesses left are ' + livesLeft);
@@ -128,7 +132,7 @@ function winLose() {
                 //Counts Wins 
                 winCount++;
                 //Changes HTML
-                document.getElementById('winCounter').innerHTML = winCount;
+                document.querySelector('.winCounter').innerHTML = winCount;
                 alert('You Win');
                 reset();
         }
@@ -137,7 +141,7 @@ function winLose() {
                 //Counts losses
                 loseCount++;
                 //Changes HTML
-                document.getElementById('lossCounter').innerHTML = loseCount;
+                document.querySelector('.lossCounter').innerHTML = loseCount;
                 alert('You Lose');
                 reset();
         }
