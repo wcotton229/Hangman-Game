@@ -26,6 +26,8 @@ var correctGuessesCounter = 0;
 
 // Functions
 //=========================================================================
+var archerTheme = new Audio ('./assets/javascript/archer_opening_theme.mp3');
+        archerTheme.play();
 
 function reset() {
         //Chooses word randomly
@@ -90,8 +92,7 @@ function startGame() {
         console.log(underScore);
         console.log(blanksAndSuccesses);
 
-        var archerTheme = new Audio ('archer_theme.mp3');
-        archerTheme.play();
+        
 }
 
 function compareLetters(userKey) {
@@ -133,7 +134,8 @@ function winLose() {
                 winCount++;
                 //Changes HTML
                 document.querySelector('.winCounter').innerHTML = winCount;
-                alert('You Win');
+                var archerYep = new Audio ('./assets/javascript/krieger_yep.mp3');
+                archerYep.play();
                 reset();
         }
         // When number of Guesses reaches 0 then You lose
@@ -142,7 +144,8 @@ function winLose() {
                 loseCount++;
                 //Changes HTML
                 document.querySelector('.lossCounter').innerHTML = loseCount;
-                alert('You Lose');
+                var archerDuh = new Audio ('./assets/javascript/archer.mp3');
+                archerDuh.play();
                 reset();
         }
 }

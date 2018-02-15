@@ -6,7 +6,9 @@ body{
 }
 
 .display-4{
+    font-family: 'Luckiest Guy', cursive;
     color: wheat;
+    font-size: 60px;
 }
 
 .jumbotron{
