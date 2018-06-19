@@ -2,4 +2,4 @@
 
 https://wcotton229.github.io/Hangman-Game/
 
-![Archer-hangman](images/Capture.JPG)
+![Archer-hangman](assets/images/Capture.JPG)
