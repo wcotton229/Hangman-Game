@@ -8,6 +8,6 @@ Click this link to play: https://wcotton229.github.io/Hangman-Game/
 
 ## Technology Used
 
-This app was built of HTML, CSS, Bootstrap and JavaScript!
+This app was built of HTML, CSS, Bootstrap and JavaScript.
 
 ![Archer-hangman](assets/images/Capture.JPG)
